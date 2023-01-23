@@ -5,6 +5,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Courses from "../pages/Courses";
 import Home from "../pages/Home";
+import logo from "../assets/logo1.jpg
 
 const Navbar = () => {
   return (
@@ -48,7 +49,7 @@ const Navbar = () => {
 
           <img
             className="md:w-52 pl-5 w-40"
-            src="https://tomari99.github.io/images/logo1.jpg"
+            src={logo}
             alt="NPI Logo"
           />
         </div>
