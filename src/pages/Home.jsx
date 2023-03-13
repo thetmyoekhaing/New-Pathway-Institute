@@ -1,6 +1,7 @@
 import React from "react";
 
 import About from "./About";
+import Contact from "./Contact";
 import Courses from "./Courses";
 import "./Home.css";
 
@@ -9,31 +10,37 @@ const Home = () => {
     <>
       <div
         id="Home"
-        className="w-full h-screen bg-center bg-cover flex flex-col justify-center items-center text-center md:p-28">
+        className={`bg-white w-full h-screen bg-center bg-cover flex flex-col justify-center items-center md:p-28 dark:bg-gray-600 `}>
         <div className="text-white font-serif">
-          <h2 className="md:text-4xl text-center p-2 text-lg">
+          <span className="ml-2 p-2 border-4 rotate-3 inline-block border-warning dark:border-info font-bold text-xs">
+            Welcome to New Pathway Institute
+          </span>
+          <h2 className="md:text-4xl p-4 text-3xl font-bold">
             Invest your future at New Pathway Institute right now
           </h2>
           <p className="p-4 md:text-xl">
             We offer you IT Diploma Courses ,Certificate Courses and Language
             Proficiency Courses
-            <strong> available both On Campus and Online</strong>
+            <strong className="text-warning dark:text-info">
+              {" "}
+              available both On Campus and Online
+            </strong>
           </p>
 
-          <div className="flex flex-row justify-center text-center items-center">
-            <a href="">
-              <button className="btn btn-warning md:w-36 w-28 hover:bg-opacity-80">
-                Learn More
+          <div className="m-4 flex text-center">
+            <a href="#Courses">
+              <button className="btn btn-warning md:w-32 w-28 hover:bg-opacity-80 dark:btn-info text-white text-xs">
+                Our Courses
               </button>
             </a>
-            &nbsp;
-            <a href="">
+            {/* &nbsp;
+            <a href="#Courses">
               <button
-                className="btn bg-white text-black hover:bg-opacity-70 hover:bg-white md:w-36 w-28
+                className="btn bg-white dark:bg-neutral dark:text-white text-black hover:bg-opacity-70 hover:bg-white md:w-36 w-28
             ">
                 View Courses
               </button>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -45,6 +52,7 @@ const Home = () => {
       {/* Course */}
 
       <Courses />
+      <Contact />
     </>
   );
 };

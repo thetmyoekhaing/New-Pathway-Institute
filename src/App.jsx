@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import About from "./pages/About";
 
 const App = () => {
+  const [darkToggle, setDarkToggle] = useState(true);
+
+  const handleChange = (newBoolean) => {
+    setDarkToggle(newBoolean);
+  };
+
   return (
-    <div>
-      <Navbar />
+    <div className={`${darkToggle && "dark"}`}>
+      <Navbar onChange={handleChange} dark={darkToggle} />
       <Footer />
     </div>
   );
